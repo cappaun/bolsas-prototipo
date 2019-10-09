@@ -1,0 +1,35 @@
+<div class="row container-fluid">
+    <!-- <div class="pull-left col-md-6 col-lg-6 col-xs-6">
+        <button type="button" class="btn btn-primary pull-left" (click)="saidaEditar(modalAssociar)">Associar</button>
+    </div>
+    <div class="pull-right col-md-6 col-lg-6 col-xs-6">
+        <button type="button" class="btn btn-danger pull-right" (click)="saidaEditar(modalDesassociar)">Desassociar</button>
+    </div> -->
+
+    <app-bolsa-detail
+    [bolsa]="bolsaSelecionada"
+    [botoes]="buttons"
+    ></app-bolsa-detail>
+
+    <hr class="col-md-12 col-lg-12 col-xs-12">
+
+    <div class="col-md-12 col-lg-21 col-xs-12">
+        <app-movimentacao-list></app-movimentacao-list>
+    </div>
+</div>
+
+<!-- <ng-template #modalDesassociar>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Desassociar Movimentação</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body form-group">
+        <app-movimentacao-detail
+        [bolsa]="true"
+        [usuario]="true"
+        (editar)="true"
+        ></app-movimentacao-detail>
+    </div>
+</ng-template> -->

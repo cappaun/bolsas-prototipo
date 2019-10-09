@@ -1,0 +1,28 @@
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['']">
+      <img [src]="logo.path" [alt]="logo.name" *ngIf="logo">
+    </a>
+    <div class="navbar-expand mr-auto">
+      <ul class="nav navbar-nav">
+        <li>
+          <a class="nav-item nav-link" [routerLink]="['/agencia']" routerLinkActive="router-link">Agência</a>
+        </li>
+        <li>
+          <a class="nav-item nav-link" [routerLink]="['/tipobolsa']" routerLinkActive="router-link">Tipo Bolsa</a>
+        </li>
+        <li>
+          <a class="nav-item nav-link" [routerLink]="['/bolsas']" routerLinkActive="router-link">Bolsas</a>
+        </li>
+        <li>
+          <a class="nav-item nav-link" [routerLink]="['/bolsas/movimentacao']" routerLinkActive="router-link">Movimentação</a>
+        </li>
+      </ul>
+    </div>
+    <div class="navbar-expand ml-auto navbar-nav">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="" target="_blank">Entrar</a>
+      </div>
+    </div>
+  </div>
+</nav>

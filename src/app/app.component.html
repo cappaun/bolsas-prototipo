@@ -1,0 +1,15 @@
+<app-navbar
+  [logo]="appLogo$ | async"
+  (logout)="onLogout()"
+></app-navbar>
+<!-- [user]="user$ | async" -->
+
+<div class="container main-content" style="margin-top: 15px;">
+    <div class="page-header">
+      <h1> {{  appTitle$ | async }} </h1>
+      <hr>
+    </div>
+  <router-outlet></router-outlet>
+</div>
+
+<app-footerbar></app-footerbar>

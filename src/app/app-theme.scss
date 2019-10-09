@@ -1,0 +1,28 @@
+// Guarda apenas variaveis, mixins e funções e deve ser importado em outros .scss
+//
+// Estilos são aplicados por componente, ou gloabalmente via styles.scss
+
+// CLASSES HELPER
+.container {
+    padding: 10px 150px 10px 15px;
+  }
+  
+  // --------- VARIAVEIS -------------
+  
+  // CORES PRINCIPAIS
+  $azul-claro-FGV:    #008fd0;
+  $azul-escuro-FGV:   #003d7d;
+  $cinza-claro-FGV:   #ededed;
+  $cinza-medio-FGV:   #4c4c4c;
+  $cinza-escuro-FGV:  #282828;
+  
+  // MIXINS
+  @mixin pagina {
+    .page-header {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .page-content {
+      margin-bottom: 10px;
+    }
+  }

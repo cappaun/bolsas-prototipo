@@ -1,0 +1,21 @@
+<div class="form-group">
+        <form [formGroup]="agenciaForm">
+            <div class="row container-fluid">
+            <div class="col-md-6 col-lg-6 col-xs-6">
+                <label>Nome</label>
+                <input class="form-control" formControlName="nome" type="text" placeholder="Nome..." disabled>
+            </div>
+        
+            <div class="col-md-6 col-lg-6 col-xs-6">
+                <label>Email</label>
+                <input class="form-control" formControlName="email" type="text" placeholder="Email..." disabled>
+            </div>
+
+            <hr class="col-md-12 col-lg-12 col-xs-12">
+
+            <div class="col-md-12 col-lg-12 col-xs-12">
+                <button type="button" (click)="editarAgencia()" class="btn btn-success pull-right">Editar</button>
+            </div>
+        </div>    
+    </form>
+</div> 

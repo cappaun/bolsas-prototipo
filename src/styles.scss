@@ -1,0 +1,26 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import './app/app-theme.scss';
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    // EXEMPLO DE USO DE VARIÁVEL
+    background-color: $cinza-claro-FGV;
+  }
+  
+  :focus {
+    outline: none;
+  }
+  
+  table {
+    tbody {
+      tr:hover {
+        cursor: pointer;
+        border-right: solid 3px $azul-escuro-FGV; 
+      }
+    }
+  }

@@ -1,0 +1,38 @@
+<div class="container-fluid">
+    <button type="button" class="btn btn-primary pull-left"(click)="chamaModal($event, modalEditar)">Cadastrar</button>
+
+    <hr>
+
+    <app-agencia-list
+    (saidaAgencia)="chamaModal($event, modalDetalhar)"
+    ></app-agencia-list>
+</div>
+
+<ng-template #modalEditar>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Cadastro de Agência</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <app-agencia-create
+        [agencia]="agenciaSelecionada"
+        ></app-agencia-create>
+    </div>
+</ng-template>
+
+<ng-template #modalDetalhar>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Detalhar Agência</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <app-agencia-detail
+        [agencia]="agenciaSelecionada"
+        (editar)="chamaModal($event, modalEditar)"
+        ></app-agencia-detail>
+    </div>
+</ng-template>

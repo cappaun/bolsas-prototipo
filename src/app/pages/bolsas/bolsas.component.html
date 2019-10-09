@@ -1,0 +1,56 @@
+<div class="container-fluid">
+    <button type="button" class="btn btn-primary pull-left" (click)="chamaModal(modalEditar, $event)">Cadastrar</button>
+
+    <hr>
+    
+    <app-bolsa-list
+    (saidaBolsa)="chamaModal(modalDetalhar, $event)"
+    ></app-bolsa-list>
+</div>
+
+<ng-template #modalEditar>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Cadastro de Bolsa</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body form-group">
+        <app-bolsa-create
+        [bolsa]="bolsaSelecionada"
+        ></app-bolsa-create>
+    </div>
+</ng-template>
+
+<ng-template #modalDetalhar>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Detalhar Bolsa</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body form-group">
+        <app-bolsa-detail
+        [bolsa]="bolsaSelecionada"
+        (editar)="chamaModal(modalEditar, $event)"
+        (associar)="chamaModal(modalAssociar, $event)"
+        (movimenta)="saidaMovimenta($event)"
+        [botoes]="buttons"
+        ></app-bolsa-detail>
+    </div>
+</ng-template>
+
+<ng-template #modalAssociar>
+    <div class="modal-header">
+        <h4 class="modal-title pull-left">Associar Movimentação</h4>
+        <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body form-group">
+        <app-movimentacao-create
+        [bolsa]="null"
+        [usuario]="null"
+        ></app-movimentacao-create>
+    </div>
+</ng-template>
